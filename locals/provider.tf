@@ -5,17 +5,16 @@ terraform {
       version = "6.16.0"
     }
   }
-  backend "s3" {
-  bucket = "somayya-remote-state"
-  key = "locals-state-demo"
-  region = "us-east-1"
-  use_lockfile = true
-  encrypt = true
- }
-}
 
+  backend "s3" {
+    bucket = "somayya-remote-state"
+    key    = "locals-demo"
+    region = "us-east-1"
+    use_lockfile = true
+    encrypt = true
+  }
+}
 
 provider "aws" {
-   region = "us-east-1"
+  region = "us-east-1"
 }
-
